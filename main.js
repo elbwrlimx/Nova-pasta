@@ -23,17 +23,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const button2 = document.getElementById('button2');
     const container = document.getElementById('container');
 
-    // Verificar se os elementos existem antes de adicionar os listeners
+    // Variáveis para controlar o tempo
+    let startTime1, startTime2;
+    
     if (button && container) {
-        button.addEventListener('click', function() {
-            console.log('Button clicked');
+        button.addEventListener('mousedown', function() {
+            startTime1 = new Date().getTime();
+        });
+
+        button.addEventListener('mouseup', function() {
+            const endTime = new Date().getTime();
+            const segundos = (endTime - startTime1) / 1000;
+            console.log(`Botão 1 ficou pressionado por ${segundos} segundos`);
             container.innerHTML = '<h1>teste</h1>';
         });
     }
 
     if (button2 && container) {
-        button2.addEventListener('click', function() {
-            console.log('Button2 clicked');
+        button2.addEventListener('mousedown', function() {
+            startTime2 = new Date().getTime();
+        });
+
+        button2.addEventListener('mouseup', function() {
+            const endTime = new Date().getTime();
+            const segundos = (endTime - startTime2) / 1000;
+            console.log(`Botão 2 ficou pressionado por ${segundos} segundos`);
             container.innerHTML = '<h2>teste2</h2>';
         });
     }
