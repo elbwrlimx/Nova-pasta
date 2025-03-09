@@ -18,9 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Contact clicked');
     });
     
-    // Event listener para o botão
+    // Event listeners para os botões
     const button = document.getElementById('button');
-    button.addEventListener('click', function() {
-        console.log('Button clicked');
-    });
+    const button2 = document.getElementById('button2');
+    const container = document.getElementById('container');
+
+    // Verificar se os elementos existem antes de adicionar os listeners
+    if (button && container) {
+        button.addEventListener('click', function() {
+            console.log('Button clicked');
+            container.innerHTML = '<h1>teste</h1>';
+        });
+    }
+
+    if (button2 && container) {
+        button2.addEventListener('click', function() {
+            console.log('Button2 clicked');
+            container.innerHTML = '<h2>teste2</h2>';
+        });
+    }
 });

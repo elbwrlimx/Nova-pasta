@@ -40,5 +40,39 @@ body{
     color: #ffd700;
     border-bottom: 2px solid        #ffd700;
 }
+.nav-list a:active{
+    background-color: #ffd700;
+    color: #333;
+    transition: all 1s ease-in-out;
+}
+
+
+.button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover{
+        border: 2px solid #ffffff;
+    transform: scale(1.5);
+    transition: all 0.2s ease-in-out;
+    background-color: #ffd700;
+}
+
+.button:active{
+    background-color: #ff2323;
+    transform: scale(1);
+    transition: all 1s ease-in-out;
+}
+
 
 
